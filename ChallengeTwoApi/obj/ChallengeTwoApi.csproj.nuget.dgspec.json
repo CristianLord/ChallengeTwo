@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\ChallengeTwoApi.csproj": {}
+    "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\ChallengeTwoApi.csproj": {
+    "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
+        "projectUniqueName": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
         "projectName": "ChallengeTwoApi",
-        "projectPath": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
+        "projectPath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
         "packagesPath": "C:\\Users\\Cristian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\obj\\",
+        "outputPath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Cristian\\AppData\\Roaming\\NuGet\\NuGet.Config",

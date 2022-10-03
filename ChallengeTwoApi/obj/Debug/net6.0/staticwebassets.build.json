@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "qU4bPDkeecgEaet6+zL9m753T5WYTvm1gqBj43yYzRM=",
+  "Hash": "+quTblbZmC8IqdKVO7i3U6QKfyYEoVYLM7pRy7grfns=",
   "Source": "ChallengeTwoApi",
   "BasePath": "_content/ChallengeTwoApi",
   "Mode": "Default",
@@ -10,79 +10,10 @@
     {
       "Name": "ChallengeTwoApi\\wwwroot",
       "Source": "ChallengeTwoApi",
-      "ContentRoot": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
       "BasePath": "_content/ChallengeTwoApi",
       "Pattern": "**"
     }
   ],
-  "Assets": [
-    {
-      "Identity": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\Files\\331Test_PDF.pdf",
-      "SourceId": "ChallengeTwoApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\",
-      "BasePath": "_content/ChallengeTwoApi",
-      "RelativePath": "Files/331Test_PDF.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\331Test_PDF.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\Files\\b9a92cff-2ac8-4906-a482-3dce40397795AngularVsReact.pdf",
-      "SourceId": "ChallengeTwoApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\",
-      "BasePath": "_content/ChallengeTwoApi",
-      "RelativePath": "Files/b9a92cff-2ac8-4906-a482-3dce40397795AngularVsReact.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\b9a92cff-2ac8-4906-a482-3dce40397795AngularVsReact.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\Files\\ddcb940b-06f7-439c-81d4-eaf30c7b598eProcedimiento Realización de Estancias y Estadias (1).pdf",
-      "SourceId": "ChallengeTwoApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\",
-      "BasePath": "_content/ChallengeTwoApi",
-      "RelativePath": "Files/ddcb940b-06f7-439c-81d4-eaf30c7b598eProcedimiento Realización de Estancias y Estadias (1).pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\ddcb940b-06f7-439c-81d4-eaf30c7b598eProcedimiento Realización de Estancias y Estadias (1).pdf"
-    },
-    {
-      "Identity": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\Files\\dfce39c0-f0fb-4a2a-ac81-7ad6822ba38cTest_PDF.pdf",
-      "SourceId": "ChallengeTwoApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\wwwroot\\",
-      "BasePath": "_content/ChallengeTwoApi",
-      "RelativePath": "Files/dfce39c0-f0fb-4a2a-ac81-7ad6822ba38cTest_PDF.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Files\\dfce39c0-f0fb-4a2a-ac81-7ad6822ba38cTest_PDF.pdf"
-    }
-  ]
+  "Assets": []
 }

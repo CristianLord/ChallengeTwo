@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -146,7 +146,7 @@ namespace ChallengeTwoApi.Controllers
             try
             {
                 var fileName = Guid.NewGuid() + form.File.FileName;
-                var path = Path.Combine(_environment.WebRootPath, "Files", fileName);
+                var path = Path.Combine(_environment.WebRootPath, "Journals", fileName);
 
                 using(FileStream newFile = System.IO.File.Create(path))
                 {

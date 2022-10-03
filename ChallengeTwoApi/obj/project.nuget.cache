@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LgD5Sdb+6ZhA/tHyr/u254TQOHYwjMM/Xu/hmKuYzJ6xEJQERMeOf/M8ijwORDJxtooPcSmy1U8mi+asKjzihA==",
+  "dgSpecHash": "tsBCWzRx4ZkvSxygMYVh3VK47sgofu1Rv65n6OkAKmJVkHa78dHSCuJW5BM5mstKBL3kEQ+1AqMjNYhwXWrkDA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Cristian\\source\\repos\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
+  "projectFilePath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Cristian\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Cristian\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
