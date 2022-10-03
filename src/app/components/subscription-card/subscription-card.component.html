@@ -1,0 +1,10 @@
+<div >
+    <img src="assets/imgs/undraw_profile_2.svg" class="img-circle w-50 mx-auto d-block">
+    <div class="card-body text-center">
+        <h5 class="card-title">{{ name }}</h5>
+        <a (click)="subscription()" class="btn" [ngClass]="subscribed ? 'btn-outline-primary':'btn-primary'" >
+            {{ subscribed ? 'Unsuscribe':'Suscribe'}}
+        </a>
+        <a [routerLink]="['/journals', this.id]" class="btn btn-success m-2">See journals</a>
+    </div>
+</div>

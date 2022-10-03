@@ -1,0 +1,19 @@
+<!-- Page Heading -->
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">{{ title }}</h1>
+    <a [routerLink]="['/upsert-journal']" class="my-2 d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+        <i class="fas fa-upload fa-sm text-white-50"></i> Create new Journal
+    </a>
+</div>
+
+<ul class="list-group">
+    <li class="list-group-item" *ngFor="let journal of journals">
+        <div class="row">
+            <div class="col-md-6">{{ journal.title }}</div>
+            <div class="col-md-6 text-end">
+                <a [routerLink]="['/view-journal',journal.id]" class="btn btn-primary btn-sm">See</a>
+                <a (click)="deleteJournal(journal.id!)" class="btn btn-danger btn-sm mx-2">Remove</a>
+            </div> 
+        </div>
+    </li>
+</ul>

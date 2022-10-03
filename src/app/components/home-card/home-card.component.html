@@ -1,0 +1,18 @@
+<div class="card my-2">
+    <div class="card-body">
+        <div class="row">
+            <img src="assets/imgs/undraw_profile_2.svg" class="img-circle col-2 d-inline-block">
+            <div class="col-8">
+                <h4 class="d-inline-block">{{ title }}</h4>
+                <div class="row">
+                    <p> {{ author}} has uploaded a new journal.</p>
+                    <p> {{ date }} </p>
+                    <div>
+                        <a [routerLink]="['/view-journal', this.id]"  class="d-block d-md-inline-block btn btn-success">See journal</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

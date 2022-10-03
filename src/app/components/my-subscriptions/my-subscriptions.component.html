@@ -1,0 +1,8 @@
+<div class="row justify-content-center">
+    <app-subscription-card class="card col-md-5 m-3" *ngFor="let subscription of subscriptions" 
+    [name]="subscription.name!" 
+    [id]="subscription.id!"
+    [subscribed]="true">
+    </app-subscription-card>
+    <p *ngIf="subscriptions">You are not subscribed to anyone yet.</p>
+</div>
