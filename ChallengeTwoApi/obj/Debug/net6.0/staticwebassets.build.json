@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "F3+fjUilFSKpF2I+Pwc94b8QJUFrjnABWcPlx800SVY=",
+  "Hash": "n2xFppk6LAxNxsFkVQpZozdEi7HkVEyZVvmE4vEL5Jw=",
   "Source": "ChallengeTwoApi",
   "BasePath": "_content/ChallengeTwoApi",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf",
+      "SourceId": "ChallengeTwoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "BasePath": "_content/ChallengeTwoApi",
+      "RelativePath": "Journals/543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Journals\\543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf"
     },
     {
       "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf",

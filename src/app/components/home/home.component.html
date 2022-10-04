@@ -10,9 +10,10 @@
 <div class="container" *ngIf="journals">
     <app-home-card *ngFor="let journal of journals" 
     [id]="journal.id!"
-    [author]="journal.title!"
+    [author]="journal.user?.firstName!"
     [title]="journal.title!"
     [date]="journal.uploadDate!">
     </app-home-card>
-    <p *ngIf="!journals">There aren't post yet.</p>
 </div>
+
+<p *ngIf="!journals">There aren't post yet.</p>

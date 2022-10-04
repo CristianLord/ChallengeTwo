@@ -11,10 +11,12 @@ export class HomeCardComponent implements OnInit {
   @Input() title!:string;
   @Input() date!:string;
   @Input() id!:number;
+  dateTime?:number;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.dateTime = Date.parse(this.date!);
   }
 
 }
