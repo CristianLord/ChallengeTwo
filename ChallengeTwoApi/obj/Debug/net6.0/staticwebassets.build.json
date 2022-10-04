@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "+quTblbZmC8IqdKVO7i3U6QKfyYEoVYLM7pRy7grfns=",
+  "Hash": "F3+fjUilFSKpF2I+Pwc94b8QJUFrjnABWcPlx800SVY=",
   "Source": "ChallengeTwoApi",
   "BasePath": "_content/ChallengeTwoApi",
   "Mode": "Default",
@@ -15,5 +15,40 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf",
+      "SourceId": "ChallengeTwoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "BasePath": "_content/ChallengeTwoApi",
+      "RelativePath": "Journals/20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf"
+    },
+    {
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf",
+      "SourceId": "ChallengeTwoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "BasePath": "_content/ChallengeTwoApi",
+      "RelativePath": "Journals/853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Journals\\853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf"
+    }
+  ]
 }

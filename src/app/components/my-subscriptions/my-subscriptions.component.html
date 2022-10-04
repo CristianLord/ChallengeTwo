@@ -4,5 +4,5 @@
     [id]="subscription.id!"
     [subscribed]="true">
     </app-subscription-card>
-    <p *ngIf="subscriptions">You are not subscribed to anyone yet.</p>
+    <p *ngIf="!subscriptions">You are not subscribed to anyone yet.</p>
 </div>

@@ -14,5 +14,5 @@
     [title]="journal.title!"
     [date]="journal.uploadDate!">
     </app-home-card>
-    <p *ngIf="journals">There aren't post yet.</p>
+    <p *ngIf="!journals">There aren't post yet.</p>
 </div>
