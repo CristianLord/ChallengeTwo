@@ -1,5 +1,8 @@
-﻿namespace ChallengeTwoApi.Models.ViewModels
+namespace ChallengeTwoApi.Models.ViewModels
 {
+    /// <summary>
+    /// This is the model to register a new user.
+    /// </summary>
     public class Register
     {
         public string Email { get; set; } = string.Empty;

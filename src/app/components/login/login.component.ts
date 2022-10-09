@@ -13,44 +13,74 @@ import { AppComponent } from 'src/app/app.component';
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.scss']
 })
+/**
+ * This component manages login of the user.
+ */
 export class LoginComponent implements OnInit {
 
+  /**
+   * Form group of the login.
+   */
   loginForm!: FormGroup;
-  private loginData!:Login;
-  errorMessage!:string;
 
-  constructor(private readonly api:AuthService, private formBuilder: FormBuilder, private cookieService:CookieService,
-    private router:Router, private data:DataService) { }
+  /**
+   * Login model.
+   */
+  private loginData!: Login;
+
+  /**
+   * If exist an error in the login.
+   */
+  errorMessage!: string;
+
+  /**
+   * Login component constructor.
+   * @param api Authentication API service.
+   * @param formBuilder Build the form.
+   * @param cookieService Create a cookie if the login was successful.
+   * @param router Redirect user a new page.
+   * @param data Save the data of the logged user.
+   */
+  constructor(private readonly api: AuthService, private formBuilder: FormBuilder, private cookieService: CookieService,
+    private router: Router, private data: DataService) { }
 
   ngOnInit(): void {
-    if(this.cookieService.check('token_access')){
+    //Verify if a user is logged in or not.
+    if (this.cookieService.check('token_access')) {
       this.router.navigate(['/home']);
       this.data.authenticated = true;
-    }else{
+    } else {
       this.data.authenticated = false;
     }
+
+    //Build a reactive form.
     this.loginForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
       password: ['', [Validators.required, Validators.minLength(6)]]
     });
-    
+
   }
 
   /**
    * Log in a user and save their data.
    */
-  login():void{
+  login(): void {
     this.loginData = this.loginForm.value;
-    this.api.apiAuthSignInPost$Json({body:this.loginData}).subscribe(
-      res => {
-        this.cookieService.set('token_access', res.token!)
-        localStorage.setItem('user', JSON.stringify(res.user!));
-        this.router.navigate(['/home']);
-        this.data.authenticated = true;
-        this.data.user = res.user;
-      },(error) => {
-        console.log(error.error.message)
-        this.errorMessage = error.error.message;
+    this.api.apiAuthSignInPost$Json({ body: this.loginData }).subscribe(
+      {
+        next: res => {
+          this.cookieService.set('token_access', res.token!)
+          localStorage.setItem('user', JSON.stringify(res.user!));
+          this.router.navigate(['/home']);
+          this.data.authenticated = true;
+          this.data.user = res.user;
+        }, error: (error) => {
+          if (error.status == 400) {
+            this.errorMessage = error.error.message;
+          } else {
+            this.errorMessage = 'Something went wrong...';
+          }
+        }
       }
     );
   }

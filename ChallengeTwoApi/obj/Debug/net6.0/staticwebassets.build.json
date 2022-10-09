@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n2xFppk6LAxNxsFkVQpZozdEi7HkVEyZVvmE4vEL5Jw=",
+  "Hash": "7OtjYkddpEz7VBtdrU4k7H60c1W3uhJd1FwLqCzUZjo=",
   "Source": "ChallengeTwoApi",
   "BasePath": "_content/ChallengeTwoApi",
   "Mode": "Default",
@@ -16,6 +16,23 @@
     }
   ],
   "Assets": [
+    {
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\005d6718-fbcd-41aa-897d-789d7fe084caAngularVsReact.pdf",
+      "SourceId": "ChallengeTwoApi",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "BasePath": "_content/ChallengeTwoApi",
+      "RelativePath": "Journals/005d6718-fbcd-41aa-897d-789d7fe084caAngularVsReact.pdf",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Journals\\005d6718-fbcd-41aa-897d-789d7fe084caAngularVsReact.pdf"
+    },
     {
       "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf",
       "SourceId": "ChallengeTwoApi",

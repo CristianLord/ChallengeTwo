@@ -8,15 +8,29 @@ import { SubscriptionsService, UsersService } from 'src/app/api/services';
   templateUrl: './subscription-find.component.html',
   styleUrls: ['./subscription-find.component.scss']
 })
+/**
+ * This component shows all user suggestions to subscribe.
+ */
 export class SubscriptionFindComponent implements OnInit {
 
+  /**
+   * List of users.
+   */
   userList!:UserViewModel[];
 
+  /**
+   * SubscriptionFind component constructor.
+   * @param api User API service.
+   * @param data Current data user.
+   */
   constructor(private readonly api:UsersService, private data:DataService) { }
 
   ngOnInit(): void {
     this.api.apiUsersGetWoutSubscIdUserGet$Json({idUser:this.data.user?.id!}).subscribe(
-      res => {this.userList = res}
+      {
+        next: res => {this.userList = res},
+        error: error => {}
+      }
     )
   }
 

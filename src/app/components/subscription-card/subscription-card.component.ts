@@ -8,13 +8,35 @@ import { SubscriptionsService } from 'src/app/api/services';
   templateUrl: './subscription-card.component.html',
   styleUrls: ['./subscription-card.component.scss']
 })
+
+/**
+ * This component shows the face with the user information.
+ */
 export class SubscriptionCardComponent implements OnInit {
 
+  /**
+   * Name of the user
+   */
   @Input() name!:string;
+
+  /**
+   * ID of the user
+   */
   @Input() id!:number;
+
+  /**
+   * If the user is subscribed to it or not
+   */
   @Input() subscribed!:boolean;
 
-  constructor(private readonly api:SubscriptionsService, 
+  /**
+   * Subscription Card component constructor.
+   * @param api Subscription API service
+   * @param data Current user data service
+   * @param router Redirect a new page when the user subscribes or unsubscribes from another one.
+   */
+  constructor(
+    private readonly api:SubscriptionsService, 
     private data:DataService,
     private router:Router) { }
 
@@ -25,14 +47,19 @@ export class SubscriptionCardComponent implements OnInit {
    * Subscribe or unsubscribe a user from another.
    */
   subscription(){
+
+    //Verify if the user is subscribed to the selected user.
     if(this.subscribed)
     {
-      this.api.apiSubscriptionsIdUserIdSubscribedDelete({
-        idUser:this.data.user?.id!,
-        idSubscribed:this.id
-      }).subscribe(res => {
-        this.router.navigate(['/find-new']);
-      });
+      if(confirm(`Are you sure you want to unsubscribe to ${this.name}?`)){
+        this.api.apiSubscriptionsIdUserIdSubscribedDelete({
+          idUser:this.data.user?.id!,
+          idSubscribed:this.id
+        }).subscribe({
+          error: error => {},
+          complete: () => this.router.navigate(['/find-new'])
+        });
+      }
     }
     else
     {
@@ -41,8 +68,9 @@ export class SubscriptionCardComponent implements OnInit {
           idUser: this.data.user?.id,
           idSubscribedUser: this.id
         }
-      }).subscribe(res => {
-        this.router.navigate(['/my-subscriptions']);
+      }).subscribe({
+        error: error => {},
+        complete:() => this.router.navigate(['/my-subscriptions'])
       });
     }
   }

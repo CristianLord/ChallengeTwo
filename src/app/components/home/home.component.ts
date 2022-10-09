@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/api/data.service';
-import { User } from 'src/app/api/models';
 import { Journal } from 'src/app/api/models/journal';
 import { JournalsService } from 'src/app/api/services/journals.service';
-import { TopbarComponent } from '../topbar/topbar.component';
 
 @Component({
   selector: 'app-home',
@@ -11,13 +9,27 @@ import { TopbarComponent } from '../topbar/topbar.component';
   styleUrls: ['./home.component.scss']
 })
 
+/**
+ * This component shows the home page where are all journals of the user's subscriptions
+ */
 export class HomeComponent implements OnInit {
 
-  user!:User;
-  journals!:Journal[];
+  /**
+   * List of journals.
+   */
+  journals!: Journal[];
 
-  constructor(private api:JournalsService, private data:DataService) { 
-    api.apiJournalsSubscriptionsJournalsIdGet$Json({id:data.user?.id!}).subscribe(res => this.journals = res);
+  /**
+   * Home component contructor.
+   * @param api Journal API service.
+   * @param data Current user data service.
+   */
+  constructor(private api: JournalsService, private data: DataService) {
+    api.apiJournalsSubscriptionsJournalsIdGet$Json({ id: data.user?.id! }).subscribe(
+      {
+        next: (res) => { this.journals = res },
+        error: (error) => { }
+      });
   }
 
   ngOnInit(): void {

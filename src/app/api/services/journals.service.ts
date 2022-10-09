@@ -36,7 +36,7 @@ export class JournalsService extends BaseService {
   apiJournalsGet$Plain$Response(params?: {
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<Journal>>> {
+  ): Observable<StrictHttpResponse<Array<Journal>>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsGetPath, 'get');
     if (params) {
@@ -63,7 +63,7 @@ export class JournalsService extends BaseService {
   apiJournalsGet$Plain(params?: {
     context?: HttpContext
   }
-): Observable<Array<Journal>> {
+  ): Observable<Array<Journal>> {
 
     return this.apiJournalsGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Journal>>) => r.body as Array<Journal>)
@@ -79,7 +79,7 @@ export class JournalsService extends BaseService {
   apiJournalsGet$Json$Response(params?: {
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<Journal>>> {
+  ): Observable<StrictHttpResponse<Array<Journal>>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsGetPath, 'get');
     if (params) {
@@ -106,7 +106,7 @@ export class JournalsService extends BaseService {
   apiJournalsGet$Json(params?: {
     context?: HttpContext
   }
-): Observable<Array<Journal>> {
+  ): Observable<Array<Journal>> {
 
     return this.apiJournalsGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Journal>>) => r.body as Array<Journal>)
@@ -127,12 +127,12 @@ export class JournalsService extends BaseService {
   apiJournalsPost$Plain$Response(params?: {
     context?: HttpContext
     body?: {
-'Title'?: string;
-'IdUser'?: number;
-'File'?: Blob;
-}
+      'Title'?: string;
+      'IdUser'?: number;
+      'File'?: Blob;
+    }
   }
-): Observable<StrictHttpResponse<Journal>> {
+  ): Observable<StrictHttpResponse<Journal>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsPostPath, 'post');
     if (params) {
@@ -160,12 +160,12 @@ export class JournalsService extends BaseService {
   apiJournalsPost$Plain(params?: {
     context?: HttpContext
     body?: {
-'Title'?: string;
-'IdUser'?: number;
-'File'?: Blob;
-}
+      'Title'?: string;
+      'IdUser'?: number;
+      'File'?: Blob;
+    }
   }
-): Observable<Journal> {
+  ): Observable<Journal> {
 
     return this.apiJournalsPost$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Journal>) => r.body as Journal)
@@ -181,12 +181,12 @@ export class JournalsService extends BaseService {
   apiJournalsPost$Json$Response(params?: {
     context?: HttpContext
     body?: {
-'Title'?: string;
-'IdUser'?: number;
-'File'?: Blob;
-}
+      'Title'?: string;
+      'IdUser'?: number;
+      'File'?: Blob;
+    }
   }
-): Observable<StrictHttpResponse<Journal>> {
+  ): Observable<StrictHttpResponse<Journal>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsPostPath, 'post');
     if (params) {
@@ -214,12 +214,12 @@ export class JournalsService extends BaseService {
   apiJournalsPost$Json(params?: {
     context?: HttpContext
     body?: {
-'Title'?: string;
-'IdUser'?: number;
-'File'?: Blob;
-}
+      'Title'?: string;
+      'IdUser'?: number;
+      'File'?: Blob;
+    }
   }
-): Observable<Journal> {
+  ): Observable<Journal> {
 
     return this.apiJournalsPost$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Journal>) => r.body as Journal)
@@ -241,7 +241,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Journal>> {
+  ): Observable<StrictHttpResponse<Journal>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsJournalIdGetPath, 'get');
     if (params) {
@@ -270,7 +270,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<Journal> {
+  ): Observable<Journal> {
 
     return this.apiJournalsJournalIdGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Journal>) => r.body as Journal)
@@ -287,7 +287,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Journal>> {
+  ): Observable<StrictHttpResponse<Journal>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsJournalIdGetPath, 'get');
     if (params) {
@@ -316,7 +316,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<Journal> {
+  ): Observable<Journal> {
 
     return this.apiJournalsJournalIdGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Journal>) => r.body as Journal)
@@ -338,7 +338,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<Journal>>> {
+  ): Observable<StrictHttpResponse<Array<Journal>>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsUserJournalsIdGetPath, 'get');
     if (params) {
@@ -367,7 +367,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<Array<Journal>> {
+  ): Observable<Array<Journal>> {
 
     return this.apiJournalsUserJournalsIdGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Journal>>) => r.body as Array<Journal>)
@@ -384,7 +384,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<Journal>>> {
+  ): Observable<StrictHttpResponse<Array<Journal>>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsUserJournalsIdGetPath, 'get');
     if (params) {
@@ -413,7 +413,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<Array<Journal>> {
+  ): Observable<Array<Journal>> {
 
     return this.apiJournalsUserJournalsIdGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Journal>>) => r.body as Array<Journal>)
@@ -435,7 +435,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<Journal>>> {
+  ): Observable<StrictHttpResponse<Array<Journal>>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsSubscriptionsJournalsIdGetPath, 'get');
     if (params) {
@@ -464,7 +464,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<Array<Journal>> {
+  ): Observable<Array<Journal>> {
 
     return this.apiJournalsSubscriptionsJournalsIdGet$Plain$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Journal>>) => r.body as Array<Journal>)
@@ -481,7 +481,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<Array<Journal>>> {
+  ): Observable<StrictHttpResponse<Array<Journal>>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsSubscriptionsJournalsIdGetPath, 'get');
     if (params) {
@@ -510,7 +510,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<Array<Journal>> {
+  ): Observable<Array<Journal>> {
 
     return this.apiJournalsSubscriptionsJournalsIdGet$Json$Response(params).pipe(
       map((r: StrictHttpResponse<Array<Journal>>) => r.body as Array<Journal>)
@@ -526,19 +526,23 @@ export class JournalsService extends BaseService {
    * This method provides access to the full `HttpResponse`, allowing access to response headers.
    * To access only the response body, use `apiJournalsIdPut()` instead.
    *
-   * This method sends `application/*+json` and handles request body of type `application/*+json`.
+   * This method sends `multipart/form-data` and handles request body of type `multipart/form-data`.
    */
   apiJournalsIdPut$Response(params: {
     id: number;
     context?: HttpContext
-    body?: Journal
+    body?: {
+      'Title'?: string;
+      'IdUser'?: number;
+      'File'?: Blob;
+    }
   }
-): Observable<StrictHttpResponse<void>> {
+  ): Observable<StrictHttpResponse<void>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsIdPutPath, 'put');
     if (params) {
       rb.path('id', params.id, {});
-      rb.body(params.body, 'application/*+json');
+      rb.body(params.body, 'multipart/form-data');
     }
 
     return this.http.request(rb.build({
@@ -557,14 +561,18 @@ export class JournalsService extends BaseService {
    * This method provides access to only to the response body.
    * To access the full response (for headers, for example), `apiJournalsIdPut$Response()` instead.
    *
-   * This method sends `application/*+json` and handles request body of type `application/*+json`.
+   * This method sends `multipart/form-data` and handles request body of type `multipart/form-data`.
    */
   apiJournalsIdPut(params: {
     id: number;
     context?: HttpContext
-    body?: Journal
+    body?: {
+      'Title'?: string;
+      'IdUser'?: number;
+      'File'?: Blob;
+    }
   }
-): Observable<void> {
+  ): Observable<void> {
 
     return this.apiJournalsIdPut$Response(params).pipe(
       map((r: StrictHttpResponse<void>) => r.body as void)
@@ -586,7 +594,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<StrictHttpResponse<void>> {
+  ): Observable<StrictHttpResponse<void>> {
 
     const rb = new RequestBuilder(this.rootUrl, JournalsService.ApiJournalsIdDeletePath, 'delete');
     if (params) {
@@ -615,7 +623,7 @@ export class JournalsService extends BaseService {
     id: number;
     context?: HttpContext
   }
-): Observable<void> {
+  ): Observable<void> {
 
     return this.apiJournalsIdDelete$Response(params).pipe(
       map((r: StrictHttpResponse<void>) => r.body as void)

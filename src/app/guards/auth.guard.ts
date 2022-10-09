@@ -6,12 +6,24 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * This class manages pages for logged in users
+ */
 export class AuthGuard implements CanActivate {
   
+  /**
+   * Authentication guard contructor.
+   * @param cookieService Application's cookies
+   * @param router Redirect a new page.
+   */
   constructor(private cookieService:CookieService, private router:Router){
 
   }
   
+  /**
+   * Redirect the user.
+   * @param flag Indicates if the user is redirected or not
+   */
   redirect(flag:boolean): any{
     if(!flag){
       this.router.navigate(['/','login'])

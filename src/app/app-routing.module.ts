@@ -8,6 +8,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { SubscriptionFindComponent } from './components/subscription-find/subscription-find.component';
 import { UpsertJournalComponent } from './components/upsert-journal/upsert-journal.component';
 import { ViewJournalComponent } from './components/view-journal/view-journal.component';
+import { Error404Component } from './components/error404/error404.component';
 import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
@@ -16,11 +17,12 @@ const routes: Routes = [
   { path: "register", component: RegisterComponent},
   { path: "home", component: HomeComponent, canActivate: [AuthGuard]},
   { path:"upsert-journal", component: UpsertJournalComponent, canActivate: [AuthGuard] },
+  { path:"upsert-journal/:id", component: UpsertJournalComponent, canActivate: [AuthGuard] },
   { path: "journals/:id", component: JournalsHomeComponent, canActivate: [AuthGuard]},
   { path: "view-journal/:id", component: ViewJournalComponent, canActivate: [AuthGuard]},
   { path: "find-new", component: SubscriptionFindComponent, canActivate: [AuthGuard]},
   { path: "my-subscriptions", component: MySubscriptionsComponent, canActivate: [AuthGuard]},
-  { path:'**', pathMatch:'full', redirectTo:'home'}
+  { path:'**', pathMatch:'full', component: Error404Component}
 ];
 
 @NgModule({

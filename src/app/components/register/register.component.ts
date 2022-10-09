@@ -11,14 +11,41 @@ import { AuthService } from 'src/app/api/services';
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.scss']
 })
+
+/**
+ * This component manages the application register.
+ */
 export class RegisterComponent implements OnInit {
 
+  /**
+   * Register form group.
+   */
   registerForm!: FormGroup;
-  private registerData!:Register;
-  errorMessage!:string;
 
-  constructor(private readonly api:AuthService, private formBuilder: FormBuilder, private cookieService:CookieService,
-    private router:Router, private data:DataService) { }
+  /**
+   * Register model.
+   */
+  private registerData!: Register;
+
+  /**
+   * Error message if there's an error in the registry.
+   */
+  errorMessage!: string;
+
+  /**
+   * Register component contructor.
+   * @param api Auhtentication API service.
+   * @param formBuilder Build the form.
+   * @param cookieService Create a cookie if the registry was successful.
+   * @param router Redirect user a new page.
+   * @param data Save the data of the registered user.
+   */
+  constructor(
+    private readonly api: AuthService,
+    private formBuilder: FormBuilder,
+    private cookieService: CookieService,
+    private router: Router,
+    private data: DataService) { }
 
   ngOnInit(): void {
     this.registerForm = this.formBuilder.group({
@@ -32,20 +59,21 @@ export class RegisterComponent implements OnInit {
   /**
    * Register a user and save their data.
    */
-  register(){
+  register() {
     this.registerData = this.registerForm.value;
-    this.api.apiAuthSignUpPost$Json({body:this.registerData}).subscribe(
-      res => {
+    this.api.apiAuthSignUpPost$Json({ body: this.registerData }).subscribe({
+      next: res => {
         this.cookieService.set('token_access', res.token!)
         localStorage.setItem('user', JSON.stringify(res.user!));
         this.router.navigate(['/home']);
         this.data.authenticated = true;
         this.data.user = res.user;
-      },(error) => {
+      },
+      error: (error) => {
         console.log(error)
         this.errorMessage = error.error.message;
       }
-    );
+    });
   }
 
 }

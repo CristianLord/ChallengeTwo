@@ -8,14 +8,19 @@ import {
   HttpErrorResponse
 } from '@angular/common/http';
 import { catchError, Observable, throwError } from 'rxjs';
+import { Router } from '@angular/router';
 
+/**
+ * This class manages all http requests from the application.
+ */
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private cookieService:CookieService) {}
+  constructor(private cookieService:CookieService,
+    private router:Router) {}
 
   /**
-   * Intercept all http request
+   * Intercept all http request.
    */
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
@@ -29,9 +34,15 @@ export class AuthInterceptor implements HttpInterceptor {
       })
     }
     return next.handle(req).pipe(
-      catchError((err) => {
-        console.log(err)
-        return throwError(err);
+      catchError((error) => {
+        if(error.status == 0){
+          console.log("Server not found...")
+        }
+        if(error.status == 404)
+        {
+          this.router.navigate(['404'])
+        }
+        return throwError(() => error);
       })
       );
   }

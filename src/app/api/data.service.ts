@@ -6,12 +6,20 @@ import { User } from './models';
 @Injectable({
   providedIn: 'root'
 })
+/**
+ * This service manages current user's data.
+ */
 export class DataService {
 
   user?:User;
   userName:string = '';
   authenticated:boolean = false;
 
+  /**
+   * Data service contructor.
+   * @param cookieService Application's cookies.
+   * @param router Redirect a new page.
+   */
   constructor(private cookieService:CookieService, private router:Router){
     
     if(cookieService.check('token_access'))
@@ -26,6 +34,9 @@ export class DataService {
 
   }
 
+  /**
+   * Log out the current user.
+   */
   loggingOut():void{
     this.cookieService.delete('token_access');
     localStorage.clear();

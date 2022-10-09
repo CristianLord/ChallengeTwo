@@ -1,7 +1,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">{{ title }}</h1>
-    <a [routerLink]="['/upsert-journal']" class="my-2 d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <a *ngIf="authorized" [routerLink]="['/upsert-journal']" class="my-2 d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-upload fa-sm text-white-50"></i> Create new Journal
     </a>
 </div>
@@ -12,9 +12,10 @@
             <div class="col-md-6">{{ journal.title }}</div>
             <div class="col-md-6 text-end">
                 <a [routerLink]="['/view-journal',journal.id]" class="btn btn-primary btn-sm">See</a>
-                <a (click)="deleteJournal(journal.id!)" class="btn btn-danger btn-sm mx-2">Remove</a>
+                <a *ngIf="authorized" [routerLink]="['/upsert-journal', journal.id]" class="btn btn-success mx-2 btn-sm">Edit</a>
+                <a *ngIf="authorized" (click)="deleteJournal(journal.id!)" class="btn btn-danger btn-sm">Remove</a>
             </div> 
         </div>
     </li>
 </ul>
-<p *ngIf="!journals">There aren't journals yet.</p>
+<p *ngIf="journals?.length == 0">There aren't journals yet.</p>

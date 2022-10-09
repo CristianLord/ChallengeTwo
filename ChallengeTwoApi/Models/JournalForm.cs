@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ChallengeTwoApi.Models
 {
@@ -9,6 +9,6 @@ namespace ChallengeTwoApi.Models
     {
         public string Title { get; set; }
         public int IdUser { get; set; }
-        public IFormFile File { get; set; }
+        public IFormFile? File { get; set; }
     }
 }

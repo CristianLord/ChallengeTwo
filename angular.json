@@ -17,6 +17,10 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
+            "allowedCommonJsDependencies": [
+              "pdfjs-dist/build/pdf",
+              "pdfjs-dist/web/pdf_viewer"
+            ],
             "outputPath": "dist/challenge-two-app",
             "index": "src/index.html",
             "main": "src/main.ts",
@@ -36,6 +40,7 @@
               "node_modules/jquery/dist/jquery.min.js",
               "node_modules/@popperjs/core/dist/umd/popper.min.js",
               "node_modules/bootstrap/dist/js/bootstrap.bundle.min.js",
+              "node_modules/jquery/dist/sb-admin-2.min.js",
               "node_modules/@fortawesome/fontawesome-free/js/all.min.js"
             ]
           },

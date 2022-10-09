@@ -21,6 +21,7 @@ import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
+import { Error404Component } from './components/error404/error404.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     ViewJournalComponent,
     SubscriptionCardComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    Error404Component
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,7 @@ import { AuthInterceptor } from './interceptors/auth.interceptor';
     {
       provide: HTTP_INTERCEPTORS, 
       useClass:AuthInterceptor,
-      multi: true
+      multi: true,
     }
   ],
   bootstrap: [AppComponent]

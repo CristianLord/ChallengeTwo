@@ -1,5 +1,8 @@
 <div class="container">
-    <pdf-viewer [src]="pdfSrc"
-              [render-text]="true"
-  ></pdf-viewer>
+  <h3>{{ this.title }}</h3>
+  <hr />
+  <div *ngIf="pdfSrc">
+    <pdf-viewer [src]="pdfSrc" [render-text]="true">
+    </pdf-viewer>
+  </div>
 </div>

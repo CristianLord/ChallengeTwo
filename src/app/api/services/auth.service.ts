@@ -16,7 +16,6 @@ import { Response } from '../models/response';
 @Injectable({
   providedIn: 'root',
 })
-
 export class AuthService extends BaseService {
   constructor(
     config: ApiConfiguration,
