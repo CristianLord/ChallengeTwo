@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from 'src/app/api/data.service';
+declare var $:any
 
 @Component({
   selector: 'app-slidebar',
@@ -18,6 +19,14 @@ export class SlidebarComponent implements OnInit {
   constructor(public data:DataService) { }
 
   ngOnInit(): void {
+    // Toggle the side navigation
+    $("#sidebarToggle, #sidebarToggleTop").on('click', function() {
+      $("body").toggleClass("sidebar-toggled");
+      $(".sidebar").toggleClass("toggled");
+      if ($(".sidebar").hasClass("toggled")) {
+        $('.sidebar .collapse').collapse('hide');
+      };
+    });
   }
 
   /**
