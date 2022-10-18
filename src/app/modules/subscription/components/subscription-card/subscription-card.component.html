@@ -5,6 +5,6 @@
         <a (click)="subscription()" class="btn" [ngClass]="subscribed ? 'btn-outline-primary':'btn-primary'" >
             {{ subscribed ? 'Unsuscribe':'Suscribe'}}
         </a>
-        <a [routerLink]="['/journals', this.id]" class="btn btn-success m-2">See journals</a>
+        <a [routerLink]="['/journal','journals', this.id]" class="btn btn-success m-2">See journals</a>
     </div>
 </div>

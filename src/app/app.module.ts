@@ -7,8 +7,6 @@ import { SlidebarComponent } from './components/slidebar/slidebar.component';
 import { TopbarComponent } from './components/topbar/topbar.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { HomeCardComponent } from './components/home-card/home-card.component';
-import { HomeComponent } from './components/home/home.component';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
 import { Error404Component } from './components/error404/error404.component';
@@ -19,8 +17,6 @@ import { Error404Component } from './components/error404/error404.component';
     SlidebarComponent,
     TopbarComponent,
     FooterComponent,
-    HomeCardComponent,
-    HomeComponent,
     Error404Component,
   ],
   imports: [
