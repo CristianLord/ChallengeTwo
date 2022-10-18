@@ -9,6 +9,7 @@ using ChallengeTwoApi.Data;
 using ChallengeTwoApi.Models;
 using ChallengeTwoApi.Models.ViewModels;
 using Microsoft.AspNetCore.Authorization;
+using ChallengeTwoApi.Services.Interfaces;
 
 namespace ChallengeTwoApi.Controllers
 {
@@ -17,45 +18,43 @@ namespace ChallengeTwoApi.Controllers
   [ApiController]
   public class UsersController : ControllerBase
   {
-    private readonly DatabaseContext _context;
+    private readonly IUserService _service;
 
-    public UsersController(DatabaseContext context)
+    public UsersController(IUserService service)
     {
-      _context = context;
+      _service = service;
     }
 
     /// <summary>
-    /// Get all users.
+    /// Gets all of <see cref="User"/>.
     /// </summary>
     /// <returns>A list of <see cref="User"/></returns>
     [HttpGet]
     public async Task<ActionResult<IEnumerable<User>>> GetUsers()
     {
-      return await _context.Users.ToListAsync();
+      try
+      {
+        var listUsers = await _service.GetUsers();
+        return Ok(listUsers);
+      }
+      catch (Exception ex)
+      {
+        return Problem(ex.Message);
+      }
     }
 
     /// <summary>
-    /// Get all users in database except current one and their subscriptions.
+    /// Gets all of <see cref="User"/> in database except current one and their subscriptions.
     /// </summary>
     /// <param name="idUser">User ID.</param>
-    /// <returns>A list of users without of the user subscriptions.</returns>
-    [HttpGet("getWoutSubsc/{idUser}")]
+    /// <returns>A list of <see cref="User"/> without of the user subscriptions.</returns>
+    [HttpGet("withoutSubs/{idUser}")]
     public async Task<ActionResult<IEnumerable<UserViewModel>>> GetAllWithoutSubscriptions(int idUser)
     {
       try
       {
-        var list = await (from user in _context.Users
-                          where
-                    !(from s in _context.Subscriptions
-                      where s.IdUser == idUser
-                      select s.IdSubscribedUser)
-                      .Contains(user.Id) && user.Id != idUser
-                          select new UserViewModel
-                          {
-                            Id = user.Id,
-                            Name = user.FirstName + " " + user.LastName
-                          }).ToListAsync();
-        return list;
+        var listUsers = await _service.GetAllWithoutSubscriptions(idUser);
+        return Ok(listUsers);
       }
       catch
       {
@@ -64,57 +63,66 @@ namespace ChallengeTwoApi.Controllers
     }
 
     /// <summary>
-    /// Get a user by id.
+    /// Gets a <see cref="User"/> by ID.
     /// </summary>
-    /// <param name="id">User ID</param>
+    /// <param name="id"><see cref="User.Id"/></param>
     /// <returns>A <see cref="User"/></returns>
     [HttpGet("{id}")]
     public async Task<ActionResult<User>> GetUser(int id)
     {
-      var user = await _context.Users.FindAsync(id);
-
-      if (user == null)
+      try
       {
-        return NotFound();
-      }
+        var user = await _service.GetUser(id);
 
-      return user;
+        if (user is null)
+        {
+          return NotFound();
+        }
+
+        return user;
+      }
+      catch (Exception ex)
+      {
+        return Problem(ex.Message);
+      }
     }
 
     /// <summary>
-    /// Modify a user.
+    /// Modifies a <see cref="User"/>.
     /// </summary>
-    /// <param name="id">ID of the user.</param>
-    /// <param name="user">User's data to update.</param>
+    /// <param name="id"><see cref="User.Id"/> to delete.</param>
+    /// <param name="user"><see cref="User"/> to update.</param>
     /// <returns></returns>
     [HttpPut("{id}")]
     public async Task<IActionResult> PutUser(int id, User user)
     {
       try
       {
-        var userFind = await _context.Users.Where(u => u.Id == id).FirstOrDefaultAsync();
+        var userFind = await _service.GetUser(id);
 
         if (userFind is null)
         {
           return NotFound();
         }
 
-        userFind.Email = user.Email;
-        userFind.FirstName = user.FirstName;
-        userFind.LastName = user.LastName;
-
-        _context.Entry(userFind).State = EntityState.Modified;
-        await _context.SaveChangesAsync();
-        return Ok("Updated correctly");
+        if(await _service.UpdateUser(id, user))
+        {
+          return Ok("Updated correctly.");
+        }
+        else
+        {
+          return Problem("Failed to update user.");
+        }
+        
       }
-      catch
+      catch(Exception ex)
       {
-        return Problem("Failed to update user.");
+        return Problem(ex.Message);
       }
     }
 
     /// <summary>
-    /// Create a new user in database.
+    /// Creates a new user in database.
     /// </summary>
     /// <param name="user">A <see cref="User"/> to insert.</param>
     /// <returns></returns>
@@ -123,53 +131,50 @@ namespace ChallengeTwoApi.Controllers
     {
       try
       {
-        _context.Users.Add(user);
-        await _context.SaveChangesAsync();
+        var userCreated = await _service.CreateUser(user);
 
-        return CreatedAtAction("GetUser", new { id = user.Id }, user);
+        if(userCreated is null)
+        {
+          return Problem("Failed to create user.");
+        }
+
+        return CreatedAtAction("GetUser", new { id = userCreated.Id }, userCreated);
       }
-      catch
+      catch(Exception ex)
       {
-        return Problem("Failed to insert user");
+        return Problem(ex.Message);
       }
     }
 
     /// <summary>
-    /// Delete a user from database.
+    /// Deletes a user from database.
     /// </summary>
-    /// <param name="id">User ID</param>
+    /// <param name="id"><see cref="User.Id"/> to delete.</param>
     /// <returns></returns>
     [HttpDelete("{id}")]
     public async Task<IActionResult> DeleteUser(int id)
     {
       try
       {
-        var user = await _context.Users.FindAsync(id);
-        if (user == null)
+        var user = await _service.GetUser(id);
+        if (user is null)
         {
           return NotFound();
         }
 
-        _context.Users.Remove(user);
-        await _context.SaveChangesAsync();
+        if(await _service.DeleteUser(user))
+        {
+          return NoContent();
+        }
 
-        return NoContent();
+        return Problem("Failed to delete user.");
       }
-      catch
+      catch(Exception ex)
       {
-        return Problem("Failed to delete user");
+        return Problem(ex.Message);
       }
     }
 
-    /// <summary>
-    /// Verify if a user exists
-    /// </summary>
-    /// <param name="id">User ID</param>
-    /// <returns></returns>
-    private bool UserExists(int id)
-    {
-      return _context.Users.Any(e => e.Id == id);
-    }
   }
 
 }

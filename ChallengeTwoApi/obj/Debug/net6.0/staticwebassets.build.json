@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "v6lSga/ASuY/qk2M+PZgx3Rfo3UmTxf1AU59x211H0M=",
+  "Hash": "ISLirr5OI3yHbj2D+6LIoOujgNBGW8K6NTcEWsMurLc=",
   "Source": "ChallengeTwoApi",
   "BasePath": "_content/ChallengeTwoApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "ChallengeTwoApi\\wwwroot",
       "Source": "ChallengeTwoApi",
-      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\",
       "BasePath": "_content/ChallengeTwoApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\1f218da3-6f88-4c72-8cfd-1ffb12556580Test_PDF.pdf",
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\Journals\\1f218da3-6f88-4c72-8cfd-1ffb12556580Test_PDF.pdf",
       "SourceId": "ChallengeTwoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\",
       "BasePath": "_content/ChallengeTwoApi",
       "RelativePath": "Journals/1f218da3-6f88-4c72-8cfd-1ffb12556580Test_PDF.pdf",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\Journals\\1f218da3-6f88-4c72-8cfd-1ffb12556580Test_PDF.pdf"
     },
     {
-      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf",
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf",
       "SourceId": "ChallengeTwoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\",
       "BasePath": "_content/ChallengeTwoApi",
       "RelativePath": "Journals/20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\Journals\\20d73cb1-3b1e-4932-9b8e-11a73a8a22e9Test_PDF.pdf"
     },
     {
-      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf",
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\Journals\\543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf",
       "SourceId": "ChallengeTwoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\",
       "BasePath": "_content/ChallengeTwoApi",
       "RelativePath": "Journals/543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf",
       "AssetKind": "All",
@@ -68,27 +68,10 @@
       "OriginalItemSpec": "wwwroot\\Journals\\543687d8-2b26-4845-9828-2bd6f1a2a3cbTest_PDF.pdf"
     },
     {
-      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\7996935e-ff1f-414a-95a3-d511a16a6325Lesson_Plans.pdf",
+      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\Journals\\853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf",
       "SourceId": "ChallengeTwoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
-      "BasePath": "_content/ChallengeTwoApi",
-      "RelativePath": "Journals/7996935e-ff1f-414a-95a3-d511a16a6325Lesson_Plans.pdf",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\Journals\\7996935e-ff1f-414a-95a3-d511a16a6325Lesson_Plans.pdf"
-    },
-    {
-      "Identity": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\Journals\\853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf",
-      "SourceId": "ChallengeTwoApi",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\wwwroot\\",
       "BasePath": "_content/ChallengeTwoApi",
       "RelativePath": "Journals/853baed6-00aa-4f08-9676-3dfaf07adb96Test_PDF.pdf",
       "AssetKind": "All",

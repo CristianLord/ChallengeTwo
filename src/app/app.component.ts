@@ -11,4 +11,5 @@ export class AppComponent {
   title = 'challenge-two-app';
   
   constructor(public data:DataService){}
+
 }

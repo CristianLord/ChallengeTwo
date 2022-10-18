@@ -19,6 +19,6 @@ namespace ChallengeTwoApi.Models
         public virtual User? User { get; set; }
         
         [NotMapped]
-        public IFormFile File { get; set; }
+        public IFormFile? File { get; set; }
     }
 }

@@ -65,7 +65,7 @@ export class RegisterComponent implements OnInit {
       next: res => {
         this.cookieService.set('token_access', res.token!)
         localStorage.setItem('user', JSON.stringify(res.user!));
-        this.router.navigate(['/home']);
+        this.router.navigate(['/','home']);
         this.data.authenticated = true;
         this.data.user = res.user;
       },

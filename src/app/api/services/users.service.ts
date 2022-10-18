@@ -214,7 +214,7 @@ export class UsersService extends BaseService {
   /**
    * Path part for operation apiUsersGetWoutSubscIdUserGet
    */
-  static readonly ApiUsersGetWoutSubscIdUserGetPath = '/api/Users/getWoutSubsc/{idUser}';
+  static readonly ApiUsersGetWoutSubscIdUserGetPath = '/api/Users/withoutSubs/{idUser}';
 
   /**
    * This method provides access to the full `HttpResponse`, allowing access to response headers.

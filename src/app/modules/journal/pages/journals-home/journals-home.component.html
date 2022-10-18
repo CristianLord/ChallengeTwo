@@ -1,7 +1,7 @@
 <!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">{{ title }}</h1>
-    <a *ngIf="authorized" [routerLink]="['/upsert-journal']" class="my-2 d-sm-inline-block btn btn-sm btn-primary shadow-sm">
+    <a *ngIf="authorized" [routerLink]="['/journal','upsert-journal']" class="my-2 d-sm-inline-block btn btn-sm btn-primary shadow-sm">
         <i class="fas fa-upload fa-sm text-white-50"></i> Create new Journal
     </a>
 </div>
@@ -11,8 +11,8 @@
         <div class="row">
             <div class="col-md-6">{{ journal.title }}</div>
             <div class="col-md-6 text-right">
-                <a [routerLink]="['/view-journal',journal.id]" class="btn btn-primary btn-sm">See</a>
-                <a *ngIf="authorized" [routerLink]="['/upsert-journal', journal.id]" class="btn btn-success mx-2 btn-sm">Edit</a>
+                <a [routerLink]="['/journal','view-journal',journal.id]" class="btn btn-primary btn-sm">See</a>
+                <a *ngIf="authorized" [routerLink]="['/journal','upsert-journal', journal.id]" class="btn btn-success mx-2 btn-sm">Edit</a>
                 <a *ngIf="authorized" (click)="deleteJournal(journal.id!)" class="btn btn-danger btn-sm">Remove</a>
             </div> 
         </div>

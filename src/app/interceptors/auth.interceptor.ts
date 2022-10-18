@@ -16,34 +16,36 @@ import { Router } from '@angular/router';
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
 
-  constructor(private cookieService:CookieService,
-    private router:Router) {}
+  constructor(private cookieService: CookieService,
+    private router: Router) { }
 
   /**
    * Intercept all http request.
    */
   intercept(request: HttpRequest<unknown>, next: HttpHandler): Observable<HttpEvent<unknown>> {
 
+    //Get token from the cookie
     const token: string = this.cookieService.get('token_access');
     let req = request;
-    if(token){
+
+    //If the cookie exists, we put it in header authorization.
+    if (token) {
       req = request.clone({
-        setHeaders:{
+        setHeaders: {
           Authorization: 'bearer ' + token
         }
       })
     }
     return next.handle(req).pipe(
       catchError((error) => {
-        if(error.status == 0){
+        if (error.status == 0) {
           console.log("Server not found...")
         }
-        if(error.status == 404)
-        {
+        if (error.status == 404) {
           this.router.navigate(['404'])
         }
         return throwError(() => error);
       })
-      );
+    );
   }
 }

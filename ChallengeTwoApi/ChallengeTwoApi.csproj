@@ -26,6 +26,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Services\Interfaces\" />
     <Folder Include="wwwroot\Journals\" />
   </ItemGroup>
 

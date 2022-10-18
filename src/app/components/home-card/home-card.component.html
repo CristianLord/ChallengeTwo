@@ -5,9 +5,9 @@
             <div class="col-8">
                 <h4 class="d-inline-block">{{ title }}</h4>
                 <p> {{ author }} has uploaded a new journal.</p>
-                <p> {{ date.substring(0,10) }} </p>
+                <p> {{ date | date:'MMM d, y, h:mm a'}} </p>
                 <div>
-                    <a [routerLink]="['/view-journal', this.id]"  class="d-block d-md-inline-block btn btn-success">See journal</a>
+                    <a [routerLink]="['/journal','view-journal', this.id]"  class="d-block d-md-inline-block btn btn-success">See journal</a>
                 </div>
             </div>
         </div>

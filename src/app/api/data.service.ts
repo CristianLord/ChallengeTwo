@@ -41,6 +41,6 @@ export class DataService {
     this.cookieService.delete('token_access');
     localStorage.clear();
     this.authenticated = false;
-    this.router.navigate(['/login']);
+    this.router.navigate(['/auth','login']);
   }
 }

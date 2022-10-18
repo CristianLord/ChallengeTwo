@@ -57,7 +57,7 @@ export class SubscriptionCardComponent implements OnInit {
           idSubscribed:this.id
         }).subscribe({
           error: error => {},
-          complete: () => this.router.navigate(['/find-new'])
+          complete: () => this.router.navigate(['/subscription','find-new'])
         });
       }
     }
@@ -70,7 +70,7 @@ export class SubscriptionCardComponent implements OnInit {
         }
       }).subscribe({
         error: error => {},
-        complete:() => this.router.navigate(['/my-subscriptions'])
+        complete:() => this.router.navigate(['/subscription','my-subscriptions'])
       });
     }
   }

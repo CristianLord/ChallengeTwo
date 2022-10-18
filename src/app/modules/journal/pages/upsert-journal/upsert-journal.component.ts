@@ -101,7 +101,7 @@ export class UpsertJournalComponent implements OnInit {
         }
       }).subscribe({
         next: res => {
-          this.router.navigate(['/journals/' + this.data.user?.id]);
+          this.router.navigate(['journal','journals', this.data.user?.id]);
         }
       });
     }
@@ -116,7 +116,7 @@ export class UpsertJournalComponent implements OnInit {
           IdUser: this.data.user?.id
         }
       }).subscribe({
-        next: () => { this.router.navigate(['/journals/' + this.data.user?.id]) },
+        next: () => { this.router.navigate(['journal','journals', this.data.user?.id]); },
         error: (error) => {}
       });
         

@@ -28,7 +28,7 @@
 
     <!-- Nav Item - Journals -->
     <li class="nav-item" routerLinkActive="active">
-        <a [routerLink]="['/journals', data.user?.id]" class="nav-link">
+        <a [routerLink]="['journal','journals', data.user?.id]" class="nav-link">
             <i class="fas fa-book"></i>
             <span>&nbsp; My journals</span>
         </a>
@@ -43,13 +43,13 @@
 
     <!-- Nav Item - Researchers -->
     <li class="nav-item" routerLinkActive="active">
-        <a routerLink="find-new" class="nav-link">
+        <a [routerLink]="['subscription','find-new']" class="nav-link">
             <i class="fas fa-search"></i>
             <span>&nbsp; Find new</span>
         </a>
     </li>
     <li class="nav-item" routerLinkActive="active">
-        <a routerLink="my-subscriptions" class="nav-link">
+        <a [routerLink]="['subscription','my-subscriptions']" class="nav-link">
             <i class="far fa-star"></i>
             <span>&nbsp; My suscriptions</span>
         </a>

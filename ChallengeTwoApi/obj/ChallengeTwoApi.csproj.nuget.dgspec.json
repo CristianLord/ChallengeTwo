@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj": {}
+    "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\ChallengeTwoApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj": {
+    "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\ChallengeTwoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
+        "projectUniqueName": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\ChallengeTwoApi.csproj",
         "projectName": "ChallengeTwoApi",
-        "projectPath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\ChallengeTwoApi.csproj",
+        "projectPath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\ChallengeTwoApi.csproj",
         "packagesPath": "C:\\Users\\Cristian\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengeTwoApi\\obj\\",
+        "outputPath": "C:\\Users\\Cristian\\Documents\\ChallengeTwo\\challenge-two-app\\ChallengetwoApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
           "C:\\Users\\Cristian\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -86,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.401\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.402\\RuntimeIdentifierGraph.json"
         }
       }
     }
